@@ -1,31 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/06 19:50:53 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/16 21:49:24 by nrubin           ###   ########.fr       */
+/*   Created: 2020/11/17 17:13:07 by nrubin            #+#    #+#             */
+/*   Updated: 2020/11/17 19:40:43 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	size_t	count;
-	int	i;
-
-	count = 0;
-	while (src[count])
-		count++;
+	size_t		i;
+	unsigned char	*ret;
+	
+	ret = b;
 	i = 0;
-	while (i < dstsize - 1 && src[i])
+	c = (unsigned char)c;
+	while (i < len)
 	{
-		dst[i] = src[i];
+		*ret = c;
+		ret++;
 		i++;
 	}
-	dst[i] = '\0';
+	return (b);
+}
+
+/* 
+int	main(void)
+{
+	char test[13];
+	int i;
+	for (i = 0; i < 12; i++)
+	{
+		test[i] = 'a';
+	}
+	test[i] = '\0';
+	printf("%s", test);
+	printf("%s\n", ft_memset(test, 'b', 12));
 	return (0);
 }
+*/ 

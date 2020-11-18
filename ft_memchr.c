@@ -1,31 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/06 19:50:53 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/16 21:49:24 by nrubin           ###   ########.fr       */
+/*   Created: 2020/11/18 14:07:01 by nrubin            #+#    #+#             */
+/*   Updated: 2020/11/18 14:31:10 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
-size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
+
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	count;
-	int	i;
+	size_t			i;
+	const unsigned char	*unsigned_s;
 
-	count = 0;
-	while (src[count])
-		count++;
+	c = (unsigned char)c;
 	i = 0;
-	while (i < dstsize - 1 && src[i])
+	while (i < n)
 	{
-		dst[i] = src[i];
+		unsigned_s = s;
+		if (*unsigned_s == c)
+			return ((void *)unsigned_s);
 		i++;
+		s++;
 	}
-	dst[i] = '\0';
+	return (NULL);
+}
+
+/*
+int	main(void)
+{
+	char	arr1[] = { 'a', 'b', 'c', 'd' };
+	int	c = 'a';
+
+	printf("%p\n", ft_memchr(arr1, c, 1));
+	printf("%p\n", memchr(arr1, c, 1));
 	return (0);
 }
+*/
