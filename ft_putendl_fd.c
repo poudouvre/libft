@@ -1,40 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/19 11:17:21 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/19 20:27:35 by nrubin           ###   ########.fr       */
+/*   Created: 2020/11/19 22:03:21 by nrubin            #+#    #+#             */
+/*   Updated: 2020/11/19 22:13:23 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+void	ft_putendl_fd(char *s, int fd)
 {
-	size_t	i;
-	char	*ret;
+	char c;
 
-	i = 0;
-	if (!(ret = (char *)malloc(sizeof(*ret) * (len + 1))))
-		return (NULL);
-	while (s[start] && i < len)
-	{
-		ret[i] = s[start];
-		i++;
-		start++;
-	}
-	ret[i] = '\0';
-	return (ret);
+	c = '\n';
+	write(fd, s, ft_strlen(s));
+	write(fd, &c, 1);
 }
-
-/*
-int	main(void)
-{
-	char	*str = "HellotheregeneralKenobi";
-	printf("%s\n", ft_substr(str, 5, 5));
-	return (0);
-}
-*/

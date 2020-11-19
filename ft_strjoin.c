@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 21:02:57 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/19 15:24:34 by nrubin           ###   ########.fr       */
+/*   Updated: 2020/11/19 20:30:02 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	j = 0;
 	len = ft_strlen(s1) + ft_strlen(s2);
-	if (!(ret = (char *)malloc(len + 1)) || (s1 == NULL || s2 == NULL))
+	if (!(ret = (char *)malloc(sizeof(*ret) * (len + 1))))
 		return (NULL);
 	while (s1[i])
 	{
@@ -41,13 +41,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (ret);
 }
 
-/*
 int	main(void)
 {
-	char *s1 = "Hello there";
-	char *s2 = "general Kenobi";
+	char *s1 = "";
+	char *s2 = " ";
 
 	printf("%s\n", ft_strjoin(s1, s2));
 	return (0);
 }
-*/
