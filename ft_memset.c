@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 17:13:07 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/17 19:40:43 by nrubin           ###   ########.fr       */
+/*   Updated: 2020/11/18 18:48:16 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,9 @@ void	*ft_memset(void *b, int c, size_t len)
 	
 	ret = b;
 	i = 0;
-	c = (unsigned char)c;
 	while (i < len)
 	{
-		*ret = c;
+		*ret = (unsigned char)c;
 		ret++;
 		i++;
 	}

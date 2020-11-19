@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/17 20:22:30 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/18 19:28:00 by nrubin           ###   ########.fr       */
+/*   Created: 2020/11/18 18:00:53 by nrubin            #+#    #+#             */
+/*   Updated: 2020/11/18 19:29:16 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
 	size_t			i;
 	unsigned char		*ret;
@@ -20,38 +20,31 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 	unsigned char		*unsigned_dst;
 
 	i = 0;
+	c = (char)c;
 	ret = dst;
 	unsigned_dst = (unsigned char *)dst;
 	unsigned_src = (const unsigned char *)src;
 	while (i < n)
 	{
 		unsigned_dst[i] = unsigned_src[i];
+		if (unsigned_src[i] == c)
+			return (&unsigned_dst[i + 1]);
 		i++;
 	}
-	return (ret);
+	return (NULL);
 }
 
 /*
 int	main(void)
 {
-	char	dst[10];
-	char	src[10];
-	int	i;
-	int	j;
+	char src1[] = "0123456789";
+	char dst1[] = "abcdefghij";
+	char src2[] = "0123456789";
+	char dst2[] = "abcdefghij";
+	int c = 'k';
 
-	i = 0; 
-	j = 0;
-
-	while (i < 9)
-		dst[i++] = 'a';
-	dst[i] = '\0';
-	while (j < 9)
-		src[j++] = 'b';
-	src[j] = '\0';
-
-	printf("src: %s\ndst: %s\n\n", src, dst);
-	ft_memcpy(dst, src, 3);
-	printf("src: %s\ndst: %s\n", src, dst);
+	printf("memccpy\nsrc1:%s\ndst1:%s\nres1:%s\ndest_final:%s\n", src1, dst1, memccpy(dst1, src1, c, 7), dst1);	
+	printf("ft_memccpy\nsrc2:%s\ndst2:%s\nres2:%s\ndest_final:%s\n", src2, dst2, ft_memccpy(dst2, src2, c, 7), dst2);
 	return (0);
 }
 */

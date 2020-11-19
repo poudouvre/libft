@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 17:04:05 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/18 13:49:03 by nrubin           ###   ########.fr       */
+/*   Updated: 2020/11/18 17:57:28 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 void	ft_bzero(void *s, size_t n)
 {
 	int	c;
-	
+
 	c = '\0';
 	if (n == 0)
-		return;
+		return ;
 	ft_memset(s, c, n);
-	return;
+	return ;
 }
 
 /*

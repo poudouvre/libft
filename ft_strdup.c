@@ -1,27 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/16 18:42:20 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/18 18:46:45 by nrubin           ###   ########.fr       */
+/*   Created: 2020/11/18 19:12:27 by nrubin            #+#    #+#             */
+/*   Updated: 2020/11/18 19:26:44 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strdup(const char *s1)
 {
-	int	i;
+	char *ret;
+	size_t len;
+	size_t	i;
 
 	i = 0;
-	while (s[i])
+	len = ft_strlen(s1);
+	if (!(ret = (char *)malloc(sizeof(*ret) * len + 1)))
+		return (NULL);
+	while (s1[i])
 	{
-		if (s[i] == (char)c)
-			return ((char *)&s[i]);
+		ret[i] = s1[i];
 		i++;
 	}
-	return (NULL);
+	ret[i] = 0;
+	return(ret);
 }
+
+/*
+int	main(void)
+{
+	char *str = "Hello there general kenobi";
+
+	printf("%s\n", strdup(str));
+	printf("%s\n", ft_strdup(str));
+	return (0);
+}
+*/
