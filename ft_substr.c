@@ -1,35 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/16 20:46:23 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/19 12:08:33 by nrubin           ###   ########.fr       */
+/*   Created: 2020/11/19 11:17:21 by nrubin            #+#    #+#             */
+/*   Updated: 2020/11/19 15:24:23 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *little, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
-	size_t	j;
+	char	*ret;
 
-	if (*little == 0)
-		return ((char *)haystack);
 	i = 0;
-	while (haystack[i] != 0)
+	if (!(ret = (char *)malloc(len + 1)))
+		return (NULL);
+	while (s[start] && i < len)
 	{
-		j = 0;
-		while (needle[j] == haystack[i + j] && i + j < len)
-		{
-			if (little[j + 1] == 0)
-				return ((char *)&haystack[i]);
-			j++;
-		}
+		ret[i] = s[start];
 		i++;
+		start++;
 	}
-	return (NULL);
+	ret[i] = '\0';
+	return (ret);
 }
+
+/*
+int	main(void)
+{
+	char	*str = "HellotheregeneralKenobi";
+	printf("%s\n", ft_substr(str, 5, 5));
+	return (0);
+}
+*/

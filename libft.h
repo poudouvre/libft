@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/06 19:51:36 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/19 11:14:45 by nrubin           ###   ########.fr       */
+/*   Updated: 2020/11/19 15:18:16 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,8 @@ int	ft_toupper(int c);
 //char	**ft_split(char const *s, char c);
 char	*ft_strjoin(char const *s1, char const *s2);
 //char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-//char	*ft_strtrim(char const *s1, char const *set);
-//char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strtrim(char const *s1, char const *set);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 //void ft_lstadd_back(t_list **alst, t_list *new);
 //void ft_lstadd_front(t_list **alst, t_list *new);
