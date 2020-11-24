@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 20:22:30 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/18 19:28:00 by nrubin           ###   ########.fr       */
+/*   Updated: 2020/11/23 20:47:24 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 	ret = dst;
 	unsigned_dst = (unsigned char *)dst;
 	unsigned_src = (const unsigned char *)src;
+	if (n == 0 || dst == src)
+		return (dst);
 	while (i < n)
 	{
 		unsigned_dst[i] = unsigned_src[i];
@@ -30,28 +32,3 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 	}
 	return (ret);
 }
-
-/*
-int	main(void)
-{
-	char	dst[10];
-	char	src[10];
-	int	i;
-	int	j;
-
-	i = 0; 
-	j = 0;
-
-	while (i < 9)
-		dst[i++] = 'a';
-	dst[i] = '\0';
-	while (j < 9)
-		src[j++] = 'b';
-	src[j] = '\0';
-
-	printf("src: %s\ndst: %s\n\n", src, dst);
-	ft_memcpy(dst, src, 3);
-	printf("src: %s\ndst: %s\n", src, dst);
-	return (0);
-}
-*/

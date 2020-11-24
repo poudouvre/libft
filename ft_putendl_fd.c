@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 22:03:21 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/19 22:13:23 by nrubin           ###   ########.fr       */
+/*   Updated: 2020/11/20 19:58:39 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putendl_fd(char *s, int fd)
 {
 	char c;
 
+	if (!s)
+		return ;
 	c = '\n';
 	write(fd, s, ft_strlen(s));
 	write(fd, &c, 1);

@@ -1,53 +1,65 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/18 21:02:57 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/23 19:41:52 by nrubin           ###   ########.fr       */
+/*   Created: 2020/11/20 16:18:35 by nrubin            #+#    #+#             */
+/*   Updated: 2020/11/20 18:43:54 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+int	ft_count_digits(int n)
 {
-	int	len;
-	char	*ret;
 	int	i;
-	int	j;
 
 	i = 0;
-	j = 0;
-	len = ft_strlen(s1) + ft_strlen(s2);
-	if (!(ret = (char *)malloc(sizeof(*ret) * (len + 1))))
+	if (n == 0)
+		return (1);
+	while (n != 0)
+	{
+		n = n / 10;
+		i++;
+	}
+	return (i);
+}
+
+char	*ft_itoa(int n)
+{
+	int	size;
+	char	*ret;
+	long	nbr;
+
+	nbr = n;
+	size = 0;
+	if (nbr < 0)
+	{
+		size++;
+		nbr *= -1;
+	}
+	size = size + ft_count_digits(nbr);
+	if (!(ret = (char *)malloc(sizeof(*ret) * (size + 1))))
 		return (NULL);
-	while (s1[i])
+	ret[size] = '\0';
+	size--;
+	while (size >= 0)
 	{
-		ret[j] = s1[i];
-		i++;
-		j++;
+		ret[size] = nbr % 10 + '0';
+		size--;
+		nbr = nbr / 10;
 	}
-	i = 0;
-	while(s2[i])
-	{
-		ret[j] = s2[i];
-		i++;
-		j++;
-	}
-	ret[j] = '\0';
+	if (n < 0)
+		ret[0] = '-';
 	return (ret);
 }
 
 /*
 int	main(void)
 {
-	char *s1 = "";
-	char *s2 = " ";
-
-	printf("%s\n", ft_strjoin(s1, s2));
+	printf("%s\n", ft_itoa(-2147483648));
 	return (0);
 }
 */

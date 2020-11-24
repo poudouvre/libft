@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/06 19:50:53 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/16 21:49:24 by nrubin           ###   ########.fr       */
+/*   Updated: 2020/11/23 20:03:20 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,19 @@
 size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
 {
 	size_t	count;
-	int	i;
+	size_t	i;
 
 	count = 0;
 	while (src[count])
 		count++;
 	i = 0;
+	if (!dstsize)
+		return (count);
 	while (i < dstsize - 1 && src[i])
 	{
 		dst[i] = src[i];
 		i++;
 	}
 	dst[i] = '\0';
-	return (0);
+	return (count);
 }

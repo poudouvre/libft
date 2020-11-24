@@ -6,13 +6,13 @@
 /*   By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 21:20:43 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/16 21:21:05 by nrubin           ###   ########.fr       */
+/*   Updated: 2020/11/20 18:45:08 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	d_len;
 	size_t	s_len;

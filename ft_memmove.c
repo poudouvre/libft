@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 15:44:35 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/18 19:28:12 by nrubin           ###   ########.fr       */
+/*   Updated: 2020/11/23 20:19:37 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	int			i;
 	unsigned char		*ret;
 	const unsigned char	*unsigned_src;
 	unsigned char		*unsigned_dst;
@@ -24,7 +23,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	unsigned_dst = (unsigned char *)dst;
 	if (dst < src)
 		return(ft_memcpy(dst, src, n));
-	while (n >= 0)
+	while (n > 0)
 	{
 		unsigned_dst[n] = unsigned_src[n];
 		n--;

@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 18:00:53 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/18 19:29:16 by nrubin           ###   ########.fr       */
+/*   Updated: 2020/11/20 19:16:14 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	unsigned char		*unsigned_dst;
 
 	i = 0;
-	c = (char)c;
+	c = (unsigned char)c;
 	ret = dst;
 	unsigned_dst = (unsigned char *)dst;
 	unsigned_src = (const unsigned char *)src;
