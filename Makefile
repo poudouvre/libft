@@ -6,7 +6,7 @@
 #    By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/20 18:05:50 by nrubin            #+#    #+#              #
-#    Updated: 2020/11/20 18:46:49 by nrubin           ###   ########.fr        #
+#    Updated: 2020/11/24 14:13:29 by nrubin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,8 @@ SRC	=	ft_atoi.c \
 		ft_substr.c \
 		ft_strjoin.c \
 		ft_strtrim.c \
+		ft_strmapi.c \
+		ft_split.c \
 		ft_itoa.c \
 		ft_putchar_fd.c \
 		ft_putstr_fd.c \

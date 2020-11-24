@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 19:12:27 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/18 19:26:44 by nrubin           ###   ########.fr       */
+/*   Updated: 2020/11/24 14:48:49 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strdup(const char *s1)
 
 	i = 0;
 	len = ft_strlen(s1);
-	if (!(ret = (char *)malloc(sizeof(*ret) * len + 1)))
+	if (!(ret = (char *)malloc(sizeof(*ret) * (len + 1))))
 		return (NULL);
 	while (s1[i])
 	{

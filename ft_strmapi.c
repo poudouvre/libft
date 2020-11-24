@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/18 15:44:35 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/24 14:15:45 by nrubin           ###   ########.fr       */
+/*   Created: 2020/11/24 12:40:55 by nrubin            #+#    #+#             */
+/*   Updated: 2020/11/24 13:19:20 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned char *u_dst;
-	const unsigned char *u_src;
-
-	u_dst = (unsigned char *)dst;
-	u_src = (const unsigned char *)src;
-
-	if (dst > src)
+	char *ret;
+	int	len;
+	int	i;
+	
+	i = 0;
+	len = ft_strlen(s);
+	if (!s || !f)
+		return (NULL);
+	if (!(ret = (char *)malloc(sizeof(*ret) * (len + 1))))
+		return (NULL);
+	while (s[i])
 	{
-		while (n--)
-		{
-			u_dst[n] = u_src[n];
-		}
-		return (dst);
+		ret[i] = f(i, s[i]);
+		i++;
 	}
-	return (ft_memcpy(dst, src, n));
+	ret[i] = '\0';
+	return (ret);
 }
