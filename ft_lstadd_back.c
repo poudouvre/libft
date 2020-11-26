@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 17:50:11 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/24 19:51:30 by nrubin           ###   ########.fr       */
+/*   Updated: 2020/11/25 19:41:40 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,13 @@ void	ft_lstadd_back(t_list **alst, t_list *new)
 {
 	t_list	*tmp;
 
-	tmp = *alst;
-	if (tmp == NULL)
+	if (!alst || !new)
+		return ;
+	if (*alst == NULL)
 	{
-		ft_lstadd_front(alst, new);
+		*alst = new;
 		return ;
 	}
-	while(tmp->next != NULL)
-	{
-		tmp = tmp->next;
-	}
+	tmp = ft_lstlast(*alst);
 	tmp->next = new;
 }

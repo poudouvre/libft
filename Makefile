@@ -6,7 +6,7 @@
 #    By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/20 18:05:50 by nrubin            #+#    #+#              #
-#    Updated: 2020/11/24 17:47:32 by nrubin           ###   ########.fr        #
+#    Updated: 2020/11/25 18:01:45 by nrubin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,8 @@ SRC	=	ft_atoi.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c \
-		ft_lstnew.c\
+
+SRC_BONUS	=		ft_lstnew.c\
 		ft_lstadd_front.c \
 		ft_lstsize.c \
 		ft_lstlast.c \
@@ -60,7 +61,7 @@ SRC	=	ft_atoi.c \
 OBJ	=	$(SRC:.c=.o)
 
 OBJ_BONUS	=	$(SRC_BONUS:.c=.o)
-CC	=	gcc
+CC	=	clang
 FLAGS	=	-Wall -Werror -Wextra 
 
 all:	$(NAME)

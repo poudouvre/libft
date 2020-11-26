@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 19:12:27 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/24 14:48:49 by nrubin           ###   ########.fr       */
+/*   Updated: 2020/11/25 20:01:01 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strdup(const char *s1)
 {
-	char *ret;
-	size_t len;
+	char	*ret;
+	size_t	len;
 	size_t	i;
 
 	i = 0;
@@ -28,16 +28,5 @@ char	*ft_strdup(const char *s1)
 		i++;
 	}
 	ret[i] = 0;
-	return(ret);
+	return (ret);
 }
-
-/*
-int	main(void)
-{
-	char *str = "Hello there general kenobi";
-
-	printf("%s\n", strdup(str));
-	printf("%s\n", ft_strdup(str));
-	return (0);
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 18:00:53 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/20 19:16:14 by nrubin           ###   ########.fr       */
+/*   Updated: 2020/11/25 19:56:05 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,18 +33,3 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	}
 	return (NULL);
 }
-
-/*
-int	main(void)
-{
-	char src1[] = "0123456789";
-	char dst1[] = "abcdefghij";
-	char src2[] = "0123456789";
-	char dst2[] = "abcdefghij";
-	int c = 'k';
-
-	printf("memccpy\nsrc1:%s\ndst1:%s\nres1:%s\ndest_final:%s\n", src1, dst1, memccpy(dst1, src1, c, 7), dst1);	
-	printf("ft_memccpy\nsrc2:%s\ndst2:%s\nres2:%s\ndest_final:%s\n", src2, dst2, ft_memccpy(dst2, src2, c, 7), dst2);
-	return (0);
-}
-*/

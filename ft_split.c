@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 15:39:04 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/24 15:44:03 by nrubin           ###   ########.fr       */
+/*   Updated: 2020/11/25 20:02:01 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ int	ft_word_count(const char *s, char c)
 
 	i = 0;
 	count = 0;
-
 	while (s[i])
 	{
-		if (ft_is_sep(s[i], c) == 0 && ((ft_is_sep(s[i+1], c) == 1) || s[i+1] == 0))
+		if (ft_is_sep(s[i], c) == 0 && ((ft_is_sep(s[i + 1], c) == 1)
+					|| s[i + 1] == 0))
 			count++;
 		i++;
 	}
@@ -73,7 +73,7 @@ char	**ft_split(const char *s, char c)
 		{
 			ret[j] = ft_strdupn(&s[i], c);
 			j++;
-			while (!ft_is_sep(s[i], c) && s[i+1])
+			while (!ft_is_sep(s[i], c) && s[i + 1])
 				i++;
 		}
 		i++;

@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 14:07:01 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/18 19:27:36 by nrubin           ###   ########.fr       */
+/*   Updated: 2020/11/25 20:01:48 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-/*
-int	main(void)
-{
-	char	arr1[] = { 'a', 'b', 'c', 'd' };
-	int	c = 'a';
-
-	printf("%p\n", ft_memchr(arr1, c, 1));
-	printf("%p\n", memchr(arr1, c, 1));
-	return (0);
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 17:05:57 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/23 19:29:41 by nrubin           ###   ########.fr       */
+/*   Updated: 2020/11/25 19:54:05 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		i++;
 	return (unsigned_s1[i] - unsigned_s2[i]);
 }
-
-/*
-int	main(void)
-{
-	char s1[] = { 'H', 'e', 'l', 'l', 'o', '\0' };
-	char s2[] = { 'H', 'f', 'l', 'l', 'o', '\0' };
-	printf("ft_memcp\ns1: %s\ns2: %s\nResult: %i\n", s1, s2, ft_memcmp(s1, s2, 4));
-	printf("memcmp\ns1: %s\ns2: %s\nResult: %i\n", s1, s2, memcmp(s1, s2, 4));
-}
-*/

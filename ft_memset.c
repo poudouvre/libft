@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 17:13:07 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/18 18:48:16 by nrubin           ###   ########.fr       */
+/*   Updated: 2020/11/26 13:04:46 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ void	*ft_memset(void *b, int c, size_t len)
 {
 	size_t		i;
 	unsigned char	*ret;
-	
-	ret = b;
+
+	ret = (unsigned char *)b;
 	i = 0;
 	while (i < len)
 	{
@@ -27,19 +27,3 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
-
-/* 
-int	main(void)
-{
-	char test[13];
-	int i;
-	for (i = 0; i < 12; i++)
-	{
-		test[i] = 'a';
-	}
-	test[i] = '\0';
-	printf("%s", test);
-	printf("%s\n", ft_memset(test, 'b', 12));
-	return (0);
-}
-*/ 

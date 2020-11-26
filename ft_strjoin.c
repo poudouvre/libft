@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 21:02:57 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/23 19:41:52 by nrubin           ###   ########.fr       */
+/*   Updated: 2020/11/25 19:55:26 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		j++;
 	}
 	i = 0;
-	while(s2[i])
+	while (s2[i])
 	{
 		ret[j] = s2[i];
 		i++;
@@ -40,14 +40,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ret[j] = '\0';
 	return (ret);
 }
-
-/*
-int	main(void)
-{
-	char *s1 = "";
-	char *s2 = " ";
-
-	printf("%s\n", ft_strjoin(s1, s2));
-	return (0);
-}
-*/
