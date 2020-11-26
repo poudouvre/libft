@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 15:39:04 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/26 15:49:40 by nrubin           ###   ########.fr       */
+/*   Updated: 2020/11/26 16:58:31 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,15 +47,28 @@ char	*ft_strdupn(const char *s, char c)
 	return (ret);
 }
 
+void	*ft_free_tab(char **tab)
+{
+	int	i;
+
+	i = 0;
+	while (tab[i])
+	{
+		free(tab[i++]);
+	}
+	free(tab);
+	return (tab);
+}
+
 char	**ft_split(const char *s, char c)
 {
-	char	**ret;
+	char	**tab;
 	int		i;
 	int		j;
 	int		count;
 
 	count = ft_word_count(s, c);
-	if (!(ret = (char **)malloc(sizeof(char *) * (count + 1))))
+	if (!(tab = (char **)malloc(sizeof(char *) * (count + 1))))
 		return (NULL);
 	i = 0;
 	j = 0;
@@ -65,12 +78,14 @@ char	**ft_split(const char *s, char c)
 			i++;
 		if (s[i] && s[i] != c)
 		{
-			ret[j] = ft_strdupn(&s[i], c);
+			tab[j] = ft_strdupn(&s[i], c);
+			if (tab[j] == NULL)
+				return(ft_free_tab(tab));		
 			j++;
 		}
 		while (s[i] && s[i] != c)
 			i++;
 	}
-	ret[j] = 0;
-	return (ret);
+	tab[j] = 0;
+	return (tab);
 }

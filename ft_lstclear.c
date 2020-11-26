@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 17:50:34 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/25 19:43:30 by nrubin           ###   ########.fr       */
+/*   Updated: 2020/11/26 16:33:19 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*tmp;
 
-	tmp = *lst;
-	while (tmp)
+	while (*lst)
 	{
 		tmp = (*lst)->next;
 		ft_lstdelone(*lst, del);
 		(*lst) = tmp;
 	}
+	(*lst) = NULL;
 }

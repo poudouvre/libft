@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 17:28:44 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/26 13:33:36 by nrubin           ###   ########.fr       */
+/*   Updated: 2020/11/26 16:20:44 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,12 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	t_list	*tmp;
 	int		i;
 
 	i = 0;
-	tmp = lst;
-	while (tmp)
+	while (lst)
 	{
-		tmp = tmp->next;
+		lst = lst->next;
 		i++;
 	}
 	return (i);
