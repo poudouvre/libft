@@ -6,18 +6,11 @@
 /*   By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 15:39:04 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/26 13:38:40 by nrubin           ###   ########.fr       */
+/*   Updated: 2020/11/26 15:49:40 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int		ft_is_sep(char c, char sep)
-{
-	if (c == sep)
-		return (1);
-	return (0);
-}
 
 int		ft_word_count(const char *s, char c)
 {
@@ -28,10 +21,12 @@ int		ft_word_count(const char *s, char c)
 	count = 0;
 	while (s[i])
 	{
-		if (ft_is_sep(s[i], c) == 0 && ((ft_is_sep(s[i + 1], c) == 1)
-					|| s[i + 1] == 0))
+		while (s[i] && s[i] == c)
+			i++;
+		if (s[i] && s[i] != c)
 			count++;
-		i++;
+		while (s[i] && s[i] != c)
+			i++;
 	}
 	return (count);
 }
@@ -39,21 +34,16 @@ int		ft_word_count(const char *s, char c)
 char	*ft_strdupn(const char *s, char c)
 {
 	char	*ret;
-	int		i;
 	int		len;
 
-	i = 0;
 	len = 0;
-	while (s[i] && ft_is_sep(s[len], c) == 0)
+	while (s[len] && s[len] != c)
 		len++;
-	if (!(ret = (char *)malloc(sizeof(*ret) * (len + 1))))
+	if (!(ret = (char *)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
-	while (i < len)
-	{
-		ret[i] = s[i];
-		i++;
-	}
-	ret[i] = 0;
+	ret[len] = 0;
+	while (len--)
+		ret[len] = s[len];
 	return (ret);
 }
 
@@ -62,21 +52,24 @@ char	**ft_split(const char *s, char c)
 	char	**ret;
 	int		i;
 	int		j;
+	int		count;
 
-	if (!(ret = (char **)malloc(sizeof(*ret) * (ft_word_count(s, c) + 1))))
+	count = ft_word_count(s, c);
+	if (!(ret = (char **)malloc(sizeof(char *) * (count + 1))))
 		return (NULL);
 	i = 0;
 	j = 0;
-	while (s[i])
+	while (count--)
 	{
-		if (!ft_is_sep(s[i], c))
+		while (s[i] && s[i] == c)
+			i++;
+		if (s[i] && s[i] != c)
 		{
 			ret[j] = ft_strdupn(&s[i], c);
 			j++;
-			while (!ft_is_sep(s[i], c) && s[i + 1])
-				i++;
 		}
-		i++;
+		while (s[i] && s[i] != c)
+			i++;
 	}
 	ret[j] = 0;
 	return (ret);
