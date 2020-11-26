@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 15:39:04 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/26 17:03:26 by nrubin           ###   ########.fr       */
+/*   Updated: 2020/11/26 17:08:24 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,9 +53,7 @@ void	*ft_free_tab(char **tab)
 
 	i = 0;
 	while (tab[i])
-	{
 		free(tab[i++]);
-	}
 	free(tab);
 	return (tab);
 }
