@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 20:22:30 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/23 20:47:24 by nrubin           ###   ########.fr       */
+/*   Updated: 2020/11/26 13:34:45 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-	size_t			i;
+	size_t				i;
 	unsigned char		*ret;
 	const unsigned char	*unsigned_src;
 	unsigned char		*unsigned_dst;

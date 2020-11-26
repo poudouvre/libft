@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 14:07:01 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/25 20:01:48 by nrubin           ###   ########.fr       */
+/*   Updated: 2020/11/26 13:35:17 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t			i;
+	size_t				i;
 	const unsigned char	*unsigned_s;
 
 	c = (unsigned char)c;

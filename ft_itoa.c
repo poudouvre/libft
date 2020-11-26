@@ -6,13 +6,13 @@
 /*   By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 16:18:35 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/25 19:58:01 by nrubin           ###   ########.fr       */
+/*   Updated: 2020/11/26 13:38:08 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_count_digits(int n)
+int		ft_count_digits(int n)
 {
 	int	i;
 
@@ -29,7 +29,7 @@ int	ft_count_digits(int n)
 
 char	*ft_itoa(int n)
 {
-	int	size;
+	int		size;
 	char	*ret;
 	long	nbr;
 
