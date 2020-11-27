@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nrubin <nrubin@42.student.fr>              +#+  +:+       +#+         #
+#    By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/20 18:05:50 by nrubin            #+#    #+#              #
-#    Updated: 2020/11/25 18:01:45 by nrubin           ###   ########.fr        #
+#    Updated: 2020/11/27 17:59:13 by nrubin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,7 +62,7 @@ OBJ	=	$(SRC:.c=.o)
 
 OBJ_BONUS	=	$(SRC_BONUS:.c=.o)
 CC	=	clang
-FLAGS	=	-Wall -Werror -Wextra 
+FLAGS	=	-Wall -Werror -Wextra
 
 all:	$(NAME)
 
