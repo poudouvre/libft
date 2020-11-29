@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/16 21:20:43 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/27 17:58:35 by nrubin           ###   ########.fr       */
+/*   Created: 2020/11/29 15:48:17 by nrubin            #+#    #+#             */
+/*   Updated: 2020/11/29 15:55:59 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,20 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	d_len;
-	size_t	s_len;
-	size_t	i;
+	size_t d_len;
+	size_t s_len;
+	size_t i;
 
-	i = 0;
 	d_len = (size_t)ft_strlen(dst);
 	s_len = (size_t)ft_strlen(src);
-	if (size < d_len)
-		return (s_len + size);
-	while (src[i] && (d_len + i) < (size - 1))
+	if (size <= d_len)
+		return (size + s_len);
+	i = d_len;
+	while (i + 1 < size && src[i - d_len])
 	{
-		dst[d_len + i] = src[i];
+		dst[i] = (char)(src[i - d_len]);
 		i++;
 	}
-	dst[d_len + i] = '\0';
+	dst[i] = '\0';
 	return (s_len + d_len);
 }
