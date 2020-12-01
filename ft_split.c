@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 15:39:04 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/27 17:58:39 by nrubin           ###   ########.fr       */
+/*   Updated: 2020/12/01 13:51:52 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,13 +47,11 @@ char	*ft_strdupn(const char *s, char c)
 	return (ret);
 }
 
-void	*ft_free_tab(char **tab)
+void	*ft_free_tab(char **tab, int n)
 {
-	int	i;
-
-	i = 0;
-	while (tab[i])
-		free(tab[i++]);
+	n = n - 1; 
+	while (tab[n])
+		free(tab[n--]);
 	free(tab);
 	return (tab);
 }
@@ -77,7 +75,7 @@ char	**ft_split(const char *s, char c)
 		if (s[i] && s[i] != c)
 		{
 			if (!(tab[j] = ft_strdupn(&s[i], c)))
-				return (ft_free_tab(tab));
+				return (ft_free_tab(tab, j));
 			j++;
 		}
 		while (s[i] && s[i] != c)
