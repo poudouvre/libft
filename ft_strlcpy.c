@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/06 19:50:53 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/27 17:58:27 by nrubin           ###   ########.fr       */
+/*   Updated: 2021/01/20 12:20:19 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,7 @@ size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
 	size_t	count;
 	size_t	i;
 
-	count = 0;
-	while (src[count])
-		count++;
+	count = ft_strlen(src);
 	i = 0;
 	if (!dstsize)
 		return (count);

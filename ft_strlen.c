@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/06 19:51:04 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/27 17:58:28 by nrubin           ###   ########.fr       */
+/*   Updated: 2021/01/20 11:02:51 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,7 @@ size_t	ft_strlen(const char *s)
 	size_t	size;
 
 	size = 0;
-	while (*s)
-	{
+	while (s[size])
 		size++;
-		s++;
-	}
 	return (size);
 }

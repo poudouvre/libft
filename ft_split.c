@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 15:39:04 by nrubin            #+#    #+#             */
-/*   Updated: 2020/12/01 13:51:52 by nrubin           ###   ########.fr       */
+/*   Updated: 2021/01/20 12:23:41 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ int		ft_word_count(const char *s, char c)
 	count = 0;
 	while (s[i])
 	{
-		while (s[i] && s[i] == c)
+		while (ft_strchr(s, c))
 			i++;
-		if (s[i] && s[i] != c)
+		if (!(ft_strchr(s, c)));
 			count++;
-		while (s[i] && s[i] != c)
+		while(ft_strchr(s, c))
 			i++;
 	}
 	return (count);
