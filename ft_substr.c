@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 11:17:21 by nrubin            #+#    #+#             */
-/*   Updated: 2021/01/20 10:56:23 by nrubin           ###   ########.fr       */
+/*   Updated: 2021/01/20 16:47:00 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ret = (char *)malloc(sizeof(*ret) * (len + 1));
 	if (!ret)
 		return (NULL);
-	ret[len] = '\0';
-	while (len--)
-		ret[len] = s[start + len];
+	while (s[start] && i < len)
+	{
+		ret[i] = s[start];
+		i++;
+		start++;
+	}
+	ret[i] = 0;
 	return (ret);
 }
