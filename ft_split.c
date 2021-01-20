@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 15:39:04 by nrubin            #+#    #+#             */
-/*   Updated: 2021/01/20 14:16:46 by nrubin           ###   ########.fr       */
+/*   Updated: 2021/01/20 14:19:40 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ int		ft_word_count(const char *s, char c)
 	{
 		while (s[i] && s[i] == c)
 			i++;
-		if (s[i] && s[i] != c);
+		if (s[i] && s[i] != c)
 			count++;
-		while(s[i] && s[i] != c)
+		while (s[i] && s[i] != c)
 			i++;
 	}
 	return (count);
@@ -49,7 +49,7 @@ char	*ft_strdupn(const char *s, char c)
 
 void	*ft_free_tab(char **tab, int n)
 {
-	n = n - 1; 
+	n = n - 1;
 	while (tab[n])
 		free(tab[n--]);
 	free(tab);
