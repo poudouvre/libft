@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/06 19:51:36 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/27 17:59:12 by nrubin           ###   ########.fr       */
+/*   Updated: 2021/01/22 11:11:23 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,16 @@
 # include <string.h>
 # include <stdio.h>
 # include <unistd.h>
+# include <sys/uio.h>
+# include <sys/types.h>
+# include <fcntl.h>
+# include <stdlib.h>
+
+#ifndef BUFFER_GNL
+
+# define BUFFER_GNL 4096
+
+#endif
 
 int				ft_atoi(const char *str);
 void			ft_bzero(void *s, size_t n);
@@ -58,6 +68,7 @@ char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char			*ft_strtrim(char const *s1, char const *set);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
+int				get_next_line(int fd, char **line);
 
 typedef struct	s_list
 {

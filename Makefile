@@ -6,7 +6,7 @@
 #    By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/20 18:05:50 by nrubin            #+#    #+#              #
-#    Updated: 2020/11/27 17:59:13 by nrubin           ###   ########.fr        #
+#    Updated: 2021/01/22 11:10:45 by nrubin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,8 +47,7 @@ SRC	=	ft_atoi.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c \
-
-SRC_BONUS	=		ft_lstnew.c\
+		ft_lstnew.c\
 		ft_lstadd_front.c \
 		ft_lstsize.c \
 		ft_lstlast.c \
@@ -57,10 +56,10 @@ SRC_BONUS	=		ft_lstnew.c\
 		ft_lstclear.c \
 		ft_lstiter.c \
 		ft_lstmap.c \
+		get_next_line.c \
 
 OBJ	=	$(SRC:.c=.o)
 
-OBJ_BONUS	=	$(SRC_BONUS:.c=.o)
 CC	=	clang
 FLAGS	=	-Wall -Werror -Wextra
 
@@ -69,18 +68,15 @@ all:	$(NAME)
 $(NAME):	$(OBJ)
 			ar rcs $@ $^
 
-bonus:	$(OBJ_BONUS)
-	ar rcs	$(NAME) $^
-
 %.o: %.c
 	$(CC) -I. -o $@ -c $? $(FLAGS)
 
 clean:
-	rm -f $(OBJ) $(OBJ_BONUS)
+	rm -f $(OBJ)
 
 fclean:	clean
 	rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all bonus clean fclean re\
+.PHONY: all clean fclean re\
