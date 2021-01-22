@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/19 14:30:13 by nrubin            #+#    #+#             */
-/*   Updated: 2021/01/22 15:48:16 by nrubin           ###   ########.fr       */
+/*   Updated: 2021/01/22 15:52:53 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int	ft_lines(char **line, char **stock)
 
 int	ft_value(int ret, char **line, char **stock)
 {
-	if (ret < 0) // in case a read fails mdiway through
+	if (ret < 0) // in case a read fails midway through
 	{
 		free(*stock);
 		return (-1);
