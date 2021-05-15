@@ -6,11 +6,13 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/06 19:45:16 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/27 17:54:34 by nrubin           ###   ########.fr       */
+/*   Updated: 2021/05/15 15:46:25 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// Converts the string argument 'str' to an integer.
 
 int	ft_atoi(const char *str)
 {

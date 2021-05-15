@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 16:18:35 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/27 17:55:21 by nrubin           ###   ########.fr       */
+/*   Updated: 2021/05/15 15:37:49 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,9 @@ int		ft_count_digits(int n)
 	}
 	return (i);
 }
+
+// Allocates (with malloc(3)) and returns a string representing the integer
+// received as an argument. It handles negative numbers.
 
 char	*ft_itoa(int n)
 {

@@ -6,11 +6,14 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 12:40:55 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/27 17:58:29 by nrubin           ###   ########.fr       */
+/*   Updated: 2021/05/15 15:38:37 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// Applies the function 'f' to each character of the string 's' to create
+// a new string (with malloc(3)) resulting from successive applications of 'f'.
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

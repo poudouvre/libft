@@ -6,11 +6,13 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 17:50:45 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/27 17:56:10 by nrubin           ###   ########.fr       */
+/*   Updated: 2021/05/15 15:44:52 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// Iterates the list 'lst' and applies the function 'f' to the content of each element.
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {

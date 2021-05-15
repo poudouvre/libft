@@ -6,11 +6,13 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 18:42:20 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/27 17:58:38 by nrubin           ###   ########.fr       */
+/*   Updated: 2021/05/15 16:02:48 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// Returns a pointer to the first occurence of the character 'c' in the string 's'.
 
 char	*ft_strchr(const char *s, int c)
 {

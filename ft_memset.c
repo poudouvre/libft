@@ -6,11 +6,14 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 17:13:07 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/27 17:58:44 by nrubin           ###   ########.fr       */
+/*   Updated: 2021/05/15 16:02:14 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// Fills the first 'len' bytes of the memory areas pointed to by 'b' with the
+// constant byte 'c'.
 
 void	*ft_memset(void *b, int c, size_t len)
 {

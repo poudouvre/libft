@@ -6,11 +6,14 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 18:00:53 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/27 17:58:48 by nrubin           ###   ########.fr       */
+/*   Updated: 2021/05/15 15:55:10 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// Copies no more than 'n' bytes from memory area 'src' to memory area 'dst', stopping
+// when the character 'c' is found.
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {

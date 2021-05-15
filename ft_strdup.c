@@ -6,11 +6,14 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 19:12:27 by nrubin            #+#    #+#             */
-/*   Updated: 2021/01/20 11:41:13 by nrubin           ###   ########.fr       */
+/*   Updated: 2021/05/15 16:04:23 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// Returns a pointer to a new string (using malloc(3)) which is a duplicate of the 
+// string 's1'. Memory
 
 char	*ft_strdup(const char *s1)
 {

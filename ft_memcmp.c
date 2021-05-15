@@ -6,11 +6,13 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 17:05:57 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/27 17:58:46 by nrubin           ###   ########.fr       */
+/*   Updated: 2021/05/15 15:58:29 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// Compares the first 'n' bytes of the memory areas 's1' and 's2'.
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

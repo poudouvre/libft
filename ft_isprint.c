@@ -6,11 +6,13 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/06 19:50:40 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/27 17:55:26 by nrubin           ###   ########.fr       */
+/*   Updated: 2021/05/15 15:56:17 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// Tests whetehr 'c' is a character of class print.
 
 int	ft_isprint(int c)
 {

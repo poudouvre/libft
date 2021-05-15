@@ -6,11 +6,13 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/06 19:50:07 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/27 17:54:59 by nrubin           ###   ########.fr       */
+/*   Updated: 2021/05/15 15:55:53 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// Tests whether 'c' is a character of class alpha.
 
 int	ft_isalpha(int c)
 {

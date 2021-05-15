@@ -6,11 +6,14 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 15:44:35 by nrubin            #+#    #+#             */
-/*   Updated: 2020/11/27 17:59:18 by nrubin           ###   ########.fr       */
+/*   Updated: 2021/05/15 16:01:36 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// Copies 'n' bytes from memory area 'src' to memory area 'dst'. The memory areas
+// may overlap.
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {
