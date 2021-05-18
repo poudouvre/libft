@@ -6,13 +6,13 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 21:02:57 by nrubin            #+#    #+#             */
-/*   Updated: 2021/05/15 15:38:30 by nrubin           ###   ########.fr       */
+/*   Updated: 2021/05/18 15:47:37 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Allocates (with malloc(3)) and returns a new stringm which is the result
+// Allocates (with malloc(3)) and returns a new string which is the result
 // of the concatenation of 's1' and 's2'.
 
 char	*ft_strjoin(char const *s1, char const *s2)

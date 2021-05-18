@@ -6,14 +6,14 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 20:22:30 by nrubin            #+#    #+#             */
-/*   Updated: 2021/05/15 15:59:08 by nrubin           ###   ########.fr       */
+/*   Updated: 2021/05/18 15:55:51 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Copies 'n' bytes from memory area 'src' to memory area 'dst'. The memory areas 
-// must not overlap.
+// Copies 'n' bytes from memory area 'src' to memory area 'dst'. The memory
+// areas must not overlap.
 
 void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {

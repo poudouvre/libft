@@ -6,14 +6,14 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/06 19:50:53 by nrubin            #+#    #+#             */
-/*   Updated: 2021/05/15 16:08:23 by nrubin           ###   ########.fr       */
+/*   Updated: 2021/05/18 15:57:05 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Copies up to 'dstsize' - 1 characters from the string 'src' to 'dst', NUL-terminating
-// the result if 'dstsize' is not 0.
+// Copies up to 'dstsize' - 1 characters from the string 'src' to 'dst',
+// NUL-terminating the result if 'dstsize' is not 0.
 
 size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
 {

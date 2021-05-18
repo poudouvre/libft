@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 15:39:04 by nrubin            #+#    #+#             */
-/*   Updated: 2021/05/15 16:15:39 by nrubin           ###   ########.fr       */
+/*   Updated: 2021/05/18 16:06:39 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ int		ft_word_count(const char *s, char c)
 	return (count);
 }
 
-// Returns a pointer to a new string which is the duplicate of the string 's' up to 'c' characters.
+// Returns a pointer to a new string which is the duplicate of the string 's'
+// up to 'c' characters.
 
 char	*ft_strdupn(const char *s, char c)
 {
@@ -51,7 +52,8 @@ char	*ft_strdupn(const char *s, char c)
 	return (ret);
 }
 
-// Frees the array and the strings it contains in the case of a failing malloc(3).
+// Frees the array and the strings it contains in the case of a failing
+// malloc(3).
 
 void	*ft_free_tab(char **tab, int n)
 {
@@ -62,8 +64,9 @@ void	*ft_free_tab(char **tab, int n)
 	return (tab);
 }
 
-// Allocates (with malloc(3)) and returns an array of strings obtained by splitting
-// 's' using the character 'c' as a delimiter. The array must be ended by a NULL pointer.
+// Allocates (with malloc(3)) and returns an array of strings obtained by
+// splitting 's' using the character 'c' as a delimiter. The array must be ended
+// by a NULL pointer.
 
 char	**ft_split(const char *s, char c)
 {

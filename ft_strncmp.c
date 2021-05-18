@@ -6,14 +6,14 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/06 19:51:14 by nrubin            #+#    #+#             */
-/*   Updated: 2021/05/15 16:09:59 by nrubin           ###   ########.fr       */
+/*   Updated: 2021/05/18 15:57:27 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Lexicographically compares the null-terminated strings 's1' and 's2', up to 'n'
-// characters. 
+// Lexicographically compares the null-terminated strings 's1' and 's2', up to
+// 'n' characters.
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

@@ -6,14 +6,14 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 14:07:01 by nrubin            #+#    #+#             */
-/*   Updated: 2021/05/15 15:57:46 by nrubin           ###   ########.fr       */
+/*   Updated: 2021/05/18 15:55:42 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Scans the initial 'n' bytes of the memory area pointed to by 's' for the first
-// instance of 'c'.
+// Scans the initial 'n' bytes of the memory area pointed to by 's' for the
+// first instance of 'c'.
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

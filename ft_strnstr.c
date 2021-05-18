@@ -6,14 +6,14 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 20:46:23 by nrubin            #+#    #+#             */
-/*   Updated: 2021/05/15 16:11:22 by nrubin           ###   ########.fr       */
+/*   Updated: 2021/05/18 15:57:38 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Locates the first occurence of the null-terminated string 'needle' in the string
-// 'haystack', where not more than 'len' characters are searched.
+// Locates the first occurence of the null-terminated string 'needle' in the
+//string 'haystack', where not more than 'len' characters are searched.
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {

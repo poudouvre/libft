@@ -6,15 +6,16 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/29 15:48:17 by nrubin            #+#    #+#             */
-/*   Updated: 2021/05/15 16:05:59 by nrubin           ###   ########.fr       */
+/*   Updated: 2021/05/18 15:56:57 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Appends the 'src' string to the 'dst' string, overwriting the terminating null byte
-// at the end of 'dst', and then adding a terminating null byte. The strings may not
-// overlap, and the 'dst' string must have enough space for the result.
+// Appends the 'src' string to the 'dst' string, overwriting the terminating
+// null byte at the end of 'dst', and then adding a terminating null byte. The
+// strings may not overlap, and the 'dst' string must have enough space for the
+// result.
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
