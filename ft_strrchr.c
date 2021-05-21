@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 20:00:08 by nrubin            #+#    #+#             */
-/*   Updated: 2021/05/18 15:53:06 by nrubin           ###   ########.fr       */
+/*   Updated: 2021/05/21 12:54:56 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,7 @@ char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
-	i = 0;
-	while (s[i])
-		i++;
+	i = ft_strlen(s);
 	if ((char)c == 0)
 		return ((char *)&s[i]);
 	i--;
