@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 15:39:04 by nrubin            #+#    #+#             */
-/*   Updated: 2021/05/24 17:43:20 by nrubin           ###   ########.fr       */
+/*   Updated: 2021/05/24 17:59:05 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void	*ft_free_tab(char **tab, int n)
 	return (tab);
 }
 
-// Workaround for the line numberl limit.
+// Workaround for the line number limit.
 
 int	ft_fill(int *i, int *j, const char *s, char *c)
 {
