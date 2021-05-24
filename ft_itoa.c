@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 16:18:35 by nrubin            #+#    #+#             */
-/*   Updated: 2021/05/24 16:08:16 by nrubin           ###   ########.fr       */
+/*   Updated: 2021/05/24 17:08:07 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,14 @@ int	ft_count_digits(int n)
 	return (i);
 }
 
+// A workaround to the line limit limitation. Ugly but norme gonna norme.
+
+void	ft_if_neg(int *size, long *nbr)
+{
+	(*size)++;
+	*nbr *= -1;
+}
+
 // Allocates (with malloc(3)) and returns a string representing the integer
 // received as an argument. It handles negative numbers.
 
@@ -39,10 +47,7 @@ char	*ft_itoa(int n)
 	nbr = n;
 	size = 0;
 	if (nbr < 0)
-	{
-		size++;
-		nbr *= -1;
-	}
+		ft_if_neg(&size, &nbr);
 	size = size + ft_count_digits(nbr);
 	ret = (char *)malloc(sizeof(*ret) * (size + 1));
 	if (!ret)
