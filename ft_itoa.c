@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 16:18:35 by nrubin            #+#    #+#             */
-/*   Updated: 2021/05/24 17:08:07 by nrubin           ###   ########.fr       */
+/*   Updated: 2021/05/24 17:41:53 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_count_digits(int n)
 	return (i);
 }
 
-// A workaround to the line limit limitation. Ugly but norme gonna norme.
+// Workaround for the line number limit.
 
 void	ft_if_neg(int *size, long *nbr)
 {

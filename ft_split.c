@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 15:39:04 by nrubin            #+#    #+#             */
-/*   Updated: 2021/05/24 16:24:05 by nrubin           ###   ########.fr       */
+/*   Updated: 2021/05/24 17:43:20 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,15 @@ void	*ft_free_tab(char **tab, int n)
 	return (tab);
 }
 
+// Workaround for the line numberl limit.
+
+int	ft_fill(int *i, int *j, const char *s, char *c)
+{
+	*i = 0;
+	*j = 0;
+	return (ft_word_count(s, *c));
+}
+
 // Allocates (with malloc(3)) and returns an array of strings obtained by
 // splitting 's' using the character 'c' as a delimiter. The array must be ended
 // by a NULL pointer.
@@ -76,12 +85,10 @@ char	**ft_split(const char *s, char c)
 	int		j;
 	int		count;
 
-	count = ft_word_count(s, c);
+	count = ft_fill(&i, &j, s, &c);
 	tab = (char **)malloc(sizeof(char *) * (count + 1));
 	if (!tab)
 		return (NULL);
-	i = 0;
-	j = 0;
 	while (count--)
 	{
 		while (s[i] && s[i] == c)
