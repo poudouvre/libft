@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 18:40:26 by nrubin            #+#    #+#             */
-/*   Updated: 2021/05/18 15:53:27 by nrubin           ###   ########.fr       */
+/*   Updated: 2021/05/24 16:07:25 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	char	*ret;
 
-	if (!(ret = (char *)malloc(count * size)))
+	ret = (char *)malloc(count * size);
+	if (!ret)
 		return (NULL);
 	ft_bzero(ret, size * count);
 	return ((void *)ret);

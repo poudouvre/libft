@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 12:40:55 by nrubin            #+#    #+#             */
-/*   Updated: 2021/05/15 15:38:37 by nrubin           ###   ########.fr       */
+/*   Updated: 2021/05/24 16:05:00 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	len = ft_strlen(s);
 	if (!s || !f)
 		return (NULL);
-	if (!(ret = (char *)malloc(sizeof(*ret) * (len + 1))))
+	ret = (char *)malloc(sizeof(*ret) * (len + 1));
+	if (!ret)
 		return (NULL);
 	while (s[i])
 	{

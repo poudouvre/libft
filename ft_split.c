@@ -6,7 +6,7 @@
 /*   By: nrubin <nrubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 15:39:04 by nrubin            #+#    #+#             */
-/*   Updated: 2021/05/18 16:06:39 by nrubin           ###   ########.fr       */
+/*   Updated: 2021/05/24 16:24:05 by nrubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 // Counts the amount of words the string 's' will be split in to.
 
-int		ft_word_count(const char *s, char c)
+int	ft_word_count(const char *s, char c)
 {
 	int	i;
 	int	count;
@@ -44,7 +44,8 @@ char	*ft_strdupn(const char *s, char c)
 	len = 0;
 	while (s[len] && s[len] != c)
 		len++;
-	if (!(ret = (char *)malloc(sizeof(char) * (len + 1))))
+	ret = (char *)malloc(sizeof(char) * (len + 1));
+	if (!ret)
 		return (NULL);
 	ret[len] = 0;
 	while (len--)
@@ -76,7 +77,8 @@ char	**ft_split(const char *s, char c)
 	int		count;
 
 	count = ft_word_count(s, c);
-	if (!(tab = (char **)malloc(sizeof(char *) * (count + 1))))
+	tab = (char **)malloc(sizeof(char *) * (count + 1));
+	if (!tab)
 		return (NULL);
 	i = 0;
 	j = 0;
@@ -86,7 +88,8 @@ char	**ft_split(const char *s, char c)
 			i++;
 		if (s[i] && s[i] != c)
 		{
-			if (!(tab[j] = ft_strdupn(&s[i], c)))
+			tab[j] = ft_strdupn(&s[i], c);
+			if (!tab[j])
 				return (ft_free_tab(tab, j));
 			j++;
 		}
